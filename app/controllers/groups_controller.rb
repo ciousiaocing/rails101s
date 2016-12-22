@@ -19,7 +19,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
 
     if @group.save
-      redirect_to groups_path
+      redirect_to groups_path, notice: '新增成功'
     else
       render :new
     end
