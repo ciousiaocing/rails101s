@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+
+  scpoe :recent, -> { order("updated_at DESC")}
+
   validates :content, presence: true
 
   belongs_to :group, counter_cache: :posts_count
