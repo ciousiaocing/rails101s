@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-  scpoe :recent, -> { order("updated_at DESC")}
+  scope :recent, -> { order("updated_at DESC")}
 
   validates :content, presence: true
 
